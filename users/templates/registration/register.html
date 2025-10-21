@@ -1,4 +1,4 @@
-{% extends "learning_log/base.html" %}
+{% extends "learning_logs/base.html" %}
 
 {% block content %}
     <form method="post" action="{% url 'users:register' %}">
@@ -8,4 +8,4 @@
         <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
 
     </form>
-{% endblock content%}
+{% endblock content %}
