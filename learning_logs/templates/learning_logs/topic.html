@@ -10,11 +10,11 @@
     </p>
     
     {% for entry in entries %}
-    <div class="card">
-        <h4>
+    <div class="card mb-3">
+        <h4 class="card-header">
             {{ entry.date_added|date:'M d, Y H:i' }}
             <small>
-                <a href="{% url 'learning_logs:edit_entry' edit.id%}">edit entry</a>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a>
             </small>
         </h4>
         <div class="card-body">{{ entry.text|linebreaks }}</div>
